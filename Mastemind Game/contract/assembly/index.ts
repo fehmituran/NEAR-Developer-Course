@@ -16,11 +16,11 @@ export function getMastermind(accountId: string): string | null {
 }
 
 export function setMastermind(message: string): void {
-  const accountId = Context.sender
+ const accountId = "fehmituran.testnet"
 
 
   if (message.includes("Win"))  {
-    ContractPromiseBatch.create('fehmituran.testnet').transfer(amount)
+    ContractPromiseBatch.create(Context.sender).transfer(amount)
     logging.log(`Congratulations, "${message}"`)
 
    } else {
